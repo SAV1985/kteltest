@@ -1,2 +1,2 @@
-# kteltest
-kteltest
+app.py файл приложения
+sqldb.py файл создания базы данных sqlite и наполнение данными 
