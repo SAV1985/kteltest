@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    {% for error in errors %}
+        <p class="bg-danger">{{error}}</p>
+    {% endfor %}
+{% endblock body %}
+    

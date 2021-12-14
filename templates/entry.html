@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block body %}
+  <h2>{{the_title}}</h2>
+
+  <form method="POST" action='/vsearch'>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1"><b>Введите серийные номера:</b></label>
+      <textarea class="form-control" name="sn" rows="5" cols="35" required></textarea>
+    </div>
+    <p></p>
+    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name='typeEquipment' required>
+      <option selected value=''>Выберите тип оборудования</option>
+      {% for item in the_data%}
+        <option value={{item[0]}}> {{item[1]}}</option>
+      {% endfor %}
+    </select>
+    <button type="submit" class="btn btn-outline-success">Проверить и записать</button>
+  </form>
+{% endblock %}
